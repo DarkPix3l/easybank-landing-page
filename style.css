@@ -27,10 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
 html,
 body {
   width: 100%;
@@ -143,7 +139,6 @@ header .wrapper {
   justify-content: space-between;
   padding: 0;
   position: relative;
-  /* overflow: hidden; */
 }
 
 .call2action {
@@ -166,9 +161,13 @@ header .wrapper {
 
 .mockup {
   position: absolute;
-  bottom: -175px;
   right: 0;
-  transform: translateX(50px);
+/*   bottom: -175px;
+  transform: translateX(50px); */
+  transform: translate(122px, 50px);
+  width: clamp(300px, 50vw, 767px); /* just a test for having the image a bit responsive also with desktop sizes */
+  transform-origin: left center;
+  
   z-index: 2;
 }
 
@@ -176,8 +175,6 @@ header .wrapper {
 
 #why-choose-us {
   background-color: var(--Light-Grayish-Blue);
-  /* position: relative; */
-  /* z-index: 0; */
   width: 100%;
 }
 
@@ -270,16 +267,9 @@ footer .wrapper {
   margin-right: 0px;
 }
 
-/* NOT WORKING NEED TO CHECK */
-
-/* .socials a{
-  transition: fill 0.3s ease;
-  
-}
-.socials a:hover{
-  fill: var(--Lime-Green);
-  
-} */
+.socials img:hover{
+ filter:  invert(42%) sepia(93%) saturate(1352%) hue-rotate(104deg) brightness(89%) contrast(119%);
+} 
 
 .footer-nav {
   display: flex;
@@ -319,6 +309,7 @@ footer .wrapper .invite {
 
 /* --------------Media Queries---------------- */
 
+
 @media (max-width: 1024px) {
   .desktop {
     display: none;
@@ -326,11 +317,15 @@ footer .wrapper .invite {
   .mobile {
     display: inherit;
   }
+  .hamburger{
+    width: 40px;
+  }
 
   .mockup {
     transform: translateX(233px);
     width: 706px;
     bottom: -93px;
+    
   }
   .call2action {
     max-width: 381px;
@@ -356,9 +351,7 @@ footer .wrapper .invite {
   p {
     font-size: 0.9rem;
   }
-  .logo {
-    width: 200px;
-  }
+
   #hero,
   #why-choose-us,
   h2,
@@ -374,13 +367,10 @@ footer .wrapper .invite {
   .mockup {
     position: absolute;
     top: -30px;
-    width: 417px;
+    /* width: 417px; */
     transform: translateX(0%);
     right: unset;
-  }
-
-  .mockup2 {
-    display: none;
+    width: clamp(255px, 90%, 417px);
   }
 
   .call2action {
@@ -434,9 +424,9 @@ footer .wrapper .invite {
     height: 785px;
   }
 
-  .mockup {
+/*   .mockup {
     width: 320px;
-  }
+  } */
 
   .phones {
     background-position-y: -108px;
@@ -454,8 +444,9 @@ footer .wrapper .invite {
 }
 
 @media (max-width: 375px) {
+
   #hero {
-    height: 737px;
+    height: 727px;
   }
   .call2action {
     margin: 59px auto;
@@ -478,10 +469,10 @@ footer .wrapper .invite {
   }
 
   #hero {
-    height: 700px;
+    height: 687px;
   }
 
-  .mockup {
+/*   .mockup {
     width: 255px;
-  }
+  } */
 }
