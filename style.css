@@ -42,9 +42,7 @@ ul {
 }
 
 section {
-  /*  min-height: 700px; */
-  /* width: 100vw; */
-  padding: 10% 0;
+  padding: 6% 0;
 }
 
 p {
@@ -152,7 +150,7 @@ header .wrapper {
   background-image: url("./images/bg-intro-desktop.svg");
   background-repeat: no-repeat;
   background-position-y: -208px;
-  background-position-x: 132px;
+  background-position-x: -39px;
   width: 50%;
   height: 100%;
 }
@@ -160,16 +158,10 @@ header .wrapper {
 .mockup {
   position: absolute;
   right: 0;
-  /*   bottom: -175px;
-  transform: translateX(50px); */
   transform: translate(122px, 50px);
-  width: clamp(
-    300px,
-    50vw,
-    767px
-  ); /* just a test for having the image a bit responsive also with desktop sizes */
+  width: clamp(300px, 56vw, 890px);
+  /* just a test for having the image a bit responsive also with desktop sizes */
   transform-origin: left center;
-
   z-index: 2;
 }
 
@@ -327,14 +319,12 @@ footer .wrapper .invite {
 
 .mobile-menu {
   width: 80%;
-  max-width: 500px;
-  margin-top: 150px;
+  max-width: 415px;
+  margin: 0 auto;
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
-  justify-self: center;
   gap: 15px;
   border-radius: 10px;
   background-color: aliceblue;
@@ -344,7 +334,7 @@ footer .wrapper .invite {
   transition: all 0.5s ease-in-out;
 }
 .slideIn {
-  transform: translateY(0);
+  transform: translateY(150px);
 }
 
 .fadeIn {
@@ -359,7 +349,17 @@ footer .wrapper .invite {
 
 /* --------------Media Queries---------------- */
 
+@media (max-width: 2560px) {
+  .phones{
+    background-position-x: 167px;
+  }
+}
+
+
 @media (max-width: 1024px) {
+  section {
+    padding: 8%;
+  }
   .desktop {
     display: none;
   }
@@ -369,12 +369,6 @@ footer .wrapper .invite {
   .hamburger {
     width: 40px;
     cursor: pointer;
-  }
-
-  .mockup {
-    transform: translateX(233px);
-    width: 706px;
-    bottom: -93px;
   }
   .call2action {
     max-width: 381px;
@@ -401,6 +395,10 @@ footer .wrapper .invite {
     font-size: 0.9rem;
   }
 
+  section {
+    padding: 10%;
+  }
+
   #hero,
   #why-choose-us,
   h2,
@@ -410,12 +408,12 @@ footer .wrapper .invite {
 
   #hero {
     flex-direction: column-reverse;
-    height: 771px;
+    height: 811px;
   }
 
   .mockup {
     position: absolute;
-    top: -30px;
+    top: -60px;
     transform: translateX(0%);
     right: unset;
     width: clamp(255px, 90%, 417px);
@@ -423,7 +421,8 @@ footer .wrapper .invite {
 
   .call2action {
     max-width: 85%;
-    margin: 71px auto;
+    margin: 0 auto;
+    padding: 10%;
   }
 
   .phones {
@@ -469,12 +468,8 @@ footer .wrapper .invite {
   }
 
   #hero {
-    height: 785px;
+    height: 846px;
   }
-
-  /*   .mockup {
-    width: 320px;
-  } */
 
   .phones {
     background-position-y: -108px;
@@ -493,10 +488,7 @@ footer .wrapper .invite {
 
 @media (max-width: 375px) {
   #hero {
-    height: 727px;
-  }
-  .call2action {
-    margin: 59px auto;
+    height: 844px;
   }
 
   .phones {
@@ -516,6 +508,6 @@ footer .wrapper .invite {
   }
 
   #hero {
-    height: 687px;
+    height: 758px;
   }
 }
