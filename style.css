@@ -348,6 +348,17 @@ footer .wrapper .invite {
   color: var(--Dark-Blue);
 }
 
+.attribution {
+  font-size: 12px;
+  color: var(--Very-Light-Gray);
+}
+
+.attribution a {
+  color: hsl(27, 63%, 53%);
+  letter-spacing: 0.5px;
+}
+
+
 /* --------------Media Queries---------------- */
 
 @media (max-width: 2560px) {
@@ -379,7 +390,7 @@ footer .wrapper .invite {
   .article-container {
     grid-template-columns: 1fr 1fr;
   }
-  .invite p {
+  .invite p:nth-child(2) {
     font-size: 0.8rem;
   }
 }
@@ -496,6 +507,9 @@ footer .wrapper .invite {
     background-position-y: 0px;
     background-position-x: 0;
     background-size: 100%;
+  }
+  .invite p:nth-child(3) {
+    width: 200px;
   }
 }
 
