@@ -43,6 +43,7 @@ ul {
 
 section {
   padding: 6% 0;
+  scroll-margin-top: 90px;
 }
 
 p {
@@ -305,7 +306,7 @@ footer .wrapper .invite {
 .overmenu {
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed; /* changed to fixed because will make the menu appear at a fixed position relative to the viewport */
   z-index: 3;
   background: linear-gradient(
     180deg,
@@ -350,11 +351,10 @@ footer .wrapper .invite {
 /* --------------Media Queries---------------- */
 
 @media (max-width: 2560px) {
-  .phones{
+  .phones {
     background-position-x: 167px;
   }
 }
-
 
 @media (max-width: 1024px) {
   section {
