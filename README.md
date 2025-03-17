@@ -2,91 +2,241 @@
 
 ![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
 
-Thanks for checking out this front-end coding challenge.
+This project is a solution for a responsive landing page, designed to look as close to the provided design as possible. The goal was to ensure an optimal layout for various screen sizes and provide smooth, interactive hover states for all clickable elements.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+---
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Features & Objectives
 
-## The challenge
+- **Responsive Layout**: The landing page adjusts its layout dynamically depending on the user’s screen size, ensuring an optimal viewing experience across mobile, tablet, and desktop devices.
+- **Interactive Hover States**: All interactive elements on the page, such as buttons, links, and menus, have hover states to enhance the user experience.
+- **Mobile Menu Animation**: JavaScript was used to animate the mobile navigation menu, providing a smooth transition when the menu is opened and closed.
+- 
+---
+## Links
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+- [Live Review](https://fm-easybank-landing-page.netlify.app/)
+- [Frontend Mentor Solution Page]()
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+---
 
-Your users should be able to:
+## Technologies Used
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- **HTML5 semantic**
+- **CSS**
+- **CSS Flexbox**
+- **CSS Grid**
+- **JavaScript**
+- **CSS Hover Effects**
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+---
 
-## Where to find everything
+## What I've leaned or revisited
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Read more about header and nav for semantic.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Difference Between overflow: hidden; and overflow: clip;
+overflow: hidden:
+Hides content that overflows the container.
+Still calculates the overflowing content in the layout (even though it’s hidden).
+Can cause issues with scrolling, fixed positioning, and interactions.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+overflow: clip:
+Also hides the overflowing content.
+Does NOT calculate the hidden content in the layout.
+Prevents layout shifts and weird rendering issues.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+Obtaining a perfect round border:
+```css
+border-radius: calc(infinity * 1px);
+```
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Getting the social network icons to change color on hover (working solution):
+```css
+.socials img:hover {
+	filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(104deg)
+	brightness(89%) contrast(119%);
+}
+```
 
-## Building your project
+Trying to achieve a fluid resize of the phone images in the hero section without setting different sizes for each breakpoint:
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```css
+width: clamp(255px, 90%, 417px);
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Understand and be able to navigate page content while using assistive technology.
 
-## Deploying your project
+Automated Accessibility Testing tools and
+- **Keyboard Navigation Test**
+- **Zoom & Responsive Testing**: ensuring that the text remains readable at 200% zoom. Test on different screen sizes and orientations.
+- **Color Contrast**: good to know, but in this case I did not have control over design choices.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+#### and more:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- **CSS Positioning & Z-Index**: Understanding how to properly manage layering and positioning in CSS helped solve several layout issues.
+- **Performance Optimization**: I learned how small tweaks like lazy loading and preload strategies can significantly improve user experience.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+---
 
-## Create a custom `README.md`
+## Mobile & Desktop Media Queries
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+The mobile version of the website was handled by creating two helper classes to manage mobile and desktop visibility of the header menu:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```css
+.mobile {
+  display: none;
+}
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+.desktop {
+  display: inherit;
+}
 
-## Submitting your solution
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+This approach ensured that elements are shown or hidden based on the screen size without relying on JavaScript.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+---
 
-## Sharing your solution
+## Layout & Design Considerations
 
-There are multiple places you can share your solution:
+### Responsive Layout
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+The page layout was designed to adjust dynamically across various screen sizes:
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+- **Mobile Layout**: The mobile layout stacks content vertically, ensuring that all elements are properly spaced. The navigation bar becomes a hamburger menu to save space, which is animated using JavaScript for smooth transitions.
+- **Tablet Layout**: At tablet sizes, the layout switches to a more balanced form, adjusting the spacing and re-positioning elements for an optimal experience.
+- **Desktop Layout**: On larger screens, the layout expands horizontally with additional spacing and content arranged in a multi-column layout.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+I used Flexbox and CSS Grid to ensure the content adapts seamlessly and is flexible for various screen sizes.
 
-## Got feedback for us?
+### Hover States
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+For interactivity, I ensured that all clickable elements on the page (buttons, links, etc.) have hover states:
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- **Buttons**: Buttons background change color becoming slightly brighter when hovered over.
+- **Footer links and icons**:  change color becoming green. 
+- **Navigation**: The navigation links have a border bottom effect with a gradient when hovered.
 
-**Have fun building!** 🚀
+### Mobile Menu Animation
+
+Here’s an example of how the mobile menu animation was implemented:
+
+```js
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const bg = document.querySelector(".overmenu");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+  
+
+hamburger.addEventListener("click", () => {
+//mobileMenu.classList.toggle('fadeIn', 'slideIn'); ERROR: classList just takes 1 class at the time.
+	mobileMenu.classList.toggle("slideIn");
+	mobileMenu.classList.toggle("fadeIn");
+	bg.classList.toggle("fadeIn");
+});
+
+  
+//close the menu when clicking on each link
+mobileMenuLinks.forEach((element) => {
+
+	element.addEventListener("click", () => {
+	mobileMenu.classList.remove("slideIn", "fadeIn");
+	bg.classList.remove("fadeIn");
+	});
+});
+
+```
+
+It's really basic.
+Just two functions: one for toggling the menu open and closed by adding/removing the right classes, and another for automatically closing it when clicking on each link. I wanted the background to fade in, while the menu itself fades in and slides.
+**the DOM `.toggle()` method eliminates the need for an `if` statement when adding or removing a class dynamically. instead using .add or .remove.**
+
+```css
+.overmenu {
+height: 100vh;
+width: 100%;
+position: fixed; /* changed to fixed because will make the menu appear at a fixed position relative to the viewport */
+z-index: 3;
+background: linear-gradient(
+180deg,
+rgba(45, 49, 77, 1) 0%,
+rgba(0, 212, 255, 0) 100%
+);
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu {
+width: 80%;
+max-width: 415px;
+margin: 0 auto;
+padding: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+border-radius: 10px;
+background-color: var(--White);
+opacity: 0;
+visibility: hidden;
+transform: translateY(-90px);
+transition: all 0.5s ease-in-out;
+
+}
+
+.slideIn {
+transform: translateY(150px);
+}
+
+.fadeIn {
+opacity: 1;
+visibility: visible;
+}
+
+```
+
+---
+
+## Accessibility Improvements
+
+During the development process, some accessibility improvements were made to ensure the website was usable for all users:
+
+1. **Keyboard Navigation Testing**: Ensured all interactive elements (links, buttons, modals) were navigable using the keyboard (Tab, Shift+Tab, Enter, Space).
+
+Automated accessibility testing was performed using **Google Lighthouse**, and manual tests were conducted to address specific issues like missing ARIA labels and interactive elements.
+
+---
+
+## Performance Optimization
+
+### Image Optimization
+
+One of the things that slightly slowed down the website was images without fixed sizes. However, I needed them to be 100% so they could remain flexible within the parent container. In the end, I chose:
+
+1. **Lazy Loading**: Implemented lazy loading for images using the `loading="lazy"` attribute to defer image loading until they are needed, thus reducing initial page load time.
+2. **Responsive Images with `srcset`**: Used the `srcset` attribute to provide different image sizes depending on the device's screen size.
+
+### Eliminate Render-Blocking Resources
+
+I resolved the issue of render-blocking resources by preloading Google Fonts with **onload fallback** and **noscript** support for better performance.
+
+### Largest Contentful Paint Optimization
+
+To improve the website's Core Web Vitals, specifically the Largest Contentful Paint (LCP), I preloaded the most significant images on the page and optimized their delivery.
+
+---
+
+## Final Thoughts
+
+This landing page design challenge focused on creating a visually appealing, responsive, and interactive website using minimal tools. It was a small one-page project that allowed me to explore various aspects of web development. There is certainly room for improvement.
+I could, for example, add a function to close the menu when the user clicks anywhere outside of it in the viewport. 😊
+
+
+## Useful resources
+
+I just remembered that I stumbled upon an article a few weeks ago about debugging z-index issues using the browser dev tools.
+https://www.webscope.io/blog/z-index-not-working-debug-it-the-modern-way
