@@ -211,7 +211,6 @@ header .wrapper {
 .article img {
   width: 100%;
   height: auto;
-  max-width: 100%;
 }
 
 .article-text {
@@ -357,7 +356,6 @@ footer .wrapper .invite {
   color: hsl(27, 63%, 53%);
   letter-spacing: 0.5px;
 }
-
 
 /* --------------Media Queries---------------- */
 

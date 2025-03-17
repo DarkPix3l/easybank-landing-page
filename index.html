@@ -11,18 +11,21 @@
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap">
+  </noscript>
 </head>
 
 <body>
   <div class="overmenu">
     <nav class="mobile-menu">
-      <a href="#hero">Home</a>
-      <a href="#why-choose-us">About</a>
-      <a href="#blog">Contact</a>
-      <a href="#blog">Blog</a>
-      <a href="#">Careers</a>
+      <a href="#hero" aria-label="Go to home section">Home</a>
+      <a href="#why-choose-us" aria-label="Go to why-choose-us section">About</a>
+      <a href="#blog" aria-label="Go to why-choose-us section">Contact</a>
+      <a href="#blog" aria-label="Go to Blog section">Blog</a>
+      <a href="#" aria-label="Go to Carrer section">Careers</a>
     </nav>
 
   </div>
@@ -31,14 +34,14 @@
       <img class="logo" src="./images/logo.svg" alt="Easybank logo">
       <nav class="desktop-menu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#why-choose-us">About</a></li>
-          <li><a href="#blog">Contact</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="#hero" aria-label="Go to home section">Home</a></li>
+          <li><a href="#why-choose-us" aria-label="Go to why-choose-us section">About</a></li>
+          <li><a href="#blog" aria-label="Go to why-choose-us section">Contact</a></li>
+          <li><a href="#blog" aria-label="Go to Blog section">Blog</a></li>
+          <li><a href="#" aria-label="Go to Carrer section">Careers</a></li>
         </ul>
       </nav>
-      <button>Request Invite</button>
+      <button aria-label="request invite">Request Invite</button>
     </div>
   </header>
   <header class="mobile">
@@ -48,14 +51,14 @@
     </div>
   </header>
 
-  <section id="hero">
+  <section id="hero" aria-label="home">
     <!-- <div class="wrapper"> -->
 
     <div class="call2action">
       <h1>Next generation digital banking</h1>
       <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving,
         budgeting, investing, and much more.</p>
-      <button>Request Invite</button>
+      <button aria-label="request invite">Request Invite</button>
     </div>
     <div class="half"></div>
     <img class="mockup" src="./images/image-mockups.png" alt="four phones showcasing the app">
@@ -63,7 +66,7 @@
     <!--   </div> --> <!-- wrapper -->
   </section> <!-- hero -->
 
-  <section id="why-choose-us">
+  <section id="why-choose-us" aria-label="why choose us section">
     <div class="wrapper">
       <h2>Why choose Easybank?</h2>
       <p>We leverage Open Banking to turn your bank account into your financial hub. Control
@@ -104,7 +107,7 @@
     </div> <!-- wrapper -->
   </section> <!-- why-choose-us -->
 
-  <section id="blog">
+  <section id="blog" aria-label="blog section">
 
     <div class="wrapper">
       <h2>Latest Articles</h2>
@@ -112,7 +115,7 @@
 
         <div class="article">
           <div class="img-ratio">
-            <img src="./images/image-currency.jpg" alt="image of money with different currency">
+            <img src="./images/image-currency.jpg" loading="lazy" alt="image of money with different currency">
           </div>
           <div class="article-text">
             <p>By Claire Robinson</p>
@@ -124,7 +127,7 @@
 
         <div class="article">
           <div class="img-ratio">
-            <img src="./images/image-restaurant.jpg" alt="image of a delicious main corse">
+            <img src="./images/image-restaurant.jpg" loading="lazy" alt="image of a delicious main corse">
           </div>
           <div class="article-text">
             <p>By Wilson Hutton</p>
@@ -136,7 +139,7 @@
 
         <div class="article">
           <div class="img-ratio">
-            <img src="./images/image-plane.jpg" alt="image of an amazing plane view">
+            <img src="./images/image-plane.jpg" loading="lazy" alt="image of an amazing plane view">
           </div>
           <div class="article-text">
             <p>By Wilson Hutton</p>
@@ -149,7 +152,7 @@
 
         <div class="article">
           <div class="img-ratio">
-            <img src="./images/image-confetti.jpg" alt="image of colored confetti with a sky blue background">
+            <img src="./images/image-confetti.jpg" loading="lazy" alt="image of colored confetti with a sky blue background">
           </div>
           <div class="article-text">
             <p>By Claire Robinson</p>
@@ -162,40 +165,43 @@
     </div> <!-- wrapper -->
   </section> <!-- articles -->
 
-  <footer>
+  <footer aria-label="footer navigation">
     <div class="wrapper">
       <div class="icons">
         <img src="./images/logo.svg" alt="Easybank logo">
         <div class="socials">
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="./images/icon-facebook.svg"
-              alt="facebook logo - visit our profile on facebook">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to our facebook page"><img
+              src="./images/icon-facebook.svg" alt="facebook logo - visit our profile on facebook">
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="./images/icon-youtube.svg"
-              alt="youtube logo - visit our youtube channel">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to our youtube page"><img
+              src="./images/icon-youtube.svg" alt="youtube logo - visit our youtube channel">
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="./images/icon-twitter.svg"
-              alt="twitter logo - visit our profile on twitter">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to our twitter page"><img
+              src="./images/icon-twitter.svg" alt="twitter logo - visit our profile on twitter">
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="./images/icon-pinterest.svg"
-              alt="pinterest logo - visit our profile on pinterest">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to our pinterest page"><img
+              src="./images/icon-pinterest.svg" alt="pinterest logo - visit our profile on pinterest">
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="./images/icon-instagram.svg"
-              alt="instagram logo - visit our profile on instagram">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to our instagram page"><img
+              src="./images/icon-instagram.svg" alt="instagram logo - visit our profile on instagram">
           </a>
         </div>
       </div>
+
       <div class="footer-nav">
         <ul>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">About Us</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to About us page">About Us</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to contact page">Contact</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to Blog section">Blog</a></li>
         </ul>
         <ul>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Support</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to career page">Careers</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to support page">Support</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Go to Privacy Policy page">Privacy
+              Policy</a></li>
         </ul>
       </div>
+
       <div class="invite">
         <button>Request Invite</button>
         <p>© Easybank. All Rights Reserved</p>
