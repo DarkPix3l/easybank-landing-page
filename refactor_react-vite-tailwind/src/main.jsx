@@ -6,7 +6,7 @@ import HeaderDesktop from './components/ui/HeaderDesktop';
 import HeaderMobile from './components/ui/HeaderDesktop';
 import Hero from './components/sections/Hero';
 import WhyChooseUs from './components/sections/WhyChooseUs';
-
+import Blog from './components/sections/Blog';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,5 +15,6 @@ createRoot(document.getElementById('root')).render(
       <HeaderMobile />
       <Hero />
       <WhyChooseUs/>
+      <Blog />
   </StrictMode>,
 )
