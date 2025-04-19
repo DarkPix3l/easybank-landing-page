@@ -1,0 +1,385 @@
+/* @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+  
+}
+
+:root {
+
+  /* ### Primary */
+  --Dark-Blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+
+  /* ### Neutral */
+  --Grayish-Blue: hsl(233, 8%, 62%);
+  --Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  /* - Weights: 300, 400, 700 */
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+section {
+  padding: 6% 0;
+  scroll-margin-top: 90px;
+}
+
+p {
+  color: var(--Grayish-Blue);
+  line-height: 29px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--Dark-Blue);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--Dark-Blue);
+}
+
+h3 {
+  color: var(--Dark-Blue);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: calc(infinity * 1px);
+  border: none;
+  background: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%) 0%,
+    hsl(192, 70%, 51%) 100%
+  );
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+button:hover {
+  background: linear-gradient(
+    90deg,
+    hsl(136, 100%, 67%) 0%,
+    hsl(192, 100%, 68%) 100%
+  );
+}
+
+.desktop-menu a {
+  color: var(--Grayish-Blue);
+  padding: 32px;
+}
+
+.desktop-menu a:hover {
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  background-color: var(--White);
+  z-index: 3;
+}
+
+.wrapper {
+  width: 85%;
+  margin: auto;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* hero section */
+
+#hero {
+  height: 745px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+}
+
+.call2action {
+  max-width: 500px;
+  margin-left: 8%;
+}
+
+.call2action p {
+  margin: 30px 0;
+}
+
+.phones {
+  background-image: url("./images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-y: -208px;
+  background-position-x: -39px;
+  width: 50%;
+  height: 100%;
+}
+
+.mockup {
+  position: absolute;
+  right: 0;
+  transform: translate(122px, 50px);
+  width: clamp(300px, 56vw, 890px);
+  /* just a test for having the image a bit responsive also with desktop sizes */
+  transform-origin: left center;
+  z-index: 2;
+}
+
+/* why-choose-us section */
+
+#why-choose-us {
+  background-color: var(--Light-Grayish-Blue);
+  width: 100%;
+}
+
+#why-choose-us .wrapper p:nth-child(2) {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  text-wrap: balance;
+}
+
+/* blog section */
+
+#blog {
+  background-color: var(--Very-Light-Gray);
+}
+
+.article-container {
+  gap: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+
+.img-ratio {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.article {
+  background-color: var(--White);
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+.article-text {
+  padding: 20px;
+}
+
+.article-text h4 {
+  margin: 20px 0;
+  color: var(--Dark-Blue);
+}
+.article-text h4:hover {
+  color: #31d35c;
+  cursor: pointer;
+}
+
+.article-text p {
+  font-size: 0.9rem;
+  line-height: 23px;
+}
+
+footer {
+  background-color: var(--Dark-Blue);
+  padding: 50px 0;
+}
+
+footer .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.icons > img {
+  /* background-color: aliceblue; */
+  filter: brightness(6);
+}
+
+.socials img {
+  margin-right: 10px;
+}
+
+.socials a:last-child img {
+  margin-right: 0px;
+}
+
+.socials img:hover {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(104deg)
+    brightness(89%) contrast(119%);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 39%;
+  line-height: 41px;
+  text-wrap: nowrap;
+}
+
+.footer-nav ul {
+  display: inline;
+}
+
+.footer-nav a {
+  color: var(--Very-Light-Gray);
+}
+
+.footer-nav a:hover {
+  color: var(--Lime-Green);
+}
+
+footer .wrapper .invite {
+  justify-self: end;
+}
+
+.invite button {
+  margin-bottom: 20px;
+}
+
+/* Behaviour classes (no js) */
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: inherit;
+}
+
+.overmenu {
+  height: 100vh;
+  width: 100%;
+  position: fixed; /* changed to fixed because will make the menu appear at a fixed position relative to the viewport */
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(45, 49, 77, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu {
+  width: 80%;
+  max-width: 415px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  background-color: var(--White);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-90px);
+  transition: all 0.5s ease-in-out;
+}
+.slideIn {
+  transform: translateY(150px);
+}
+
+.fadeIn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu a {
+  padding: 17px;
+  color: var(--Dark-Blue);
+}
+
+.attribution {
+  font-size: 12px;
+  color: var(--Very-Light-Gray);
+}
+
+.attribution a {
+  color: hsl(27, 63%, 53%);
+  letter-spacing: 0.5px;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
