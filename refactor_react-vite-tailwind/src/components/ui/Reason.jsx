@@ -1,15 +1,12 @@
-function Reason() {
+function Reason({ image, alt, title, description }) {
 
   return (
-    <>
-      <div class="reason">
-        <img src="./images/icon-online.svg" alt="online banking icon"/>
-        <h3>Online Banking</h3>
-        <p>Our modern web and mobile applications allow you to keep track of your finances
-          wherever you are in the world.</p>
-      </div>
-    </>
+    <div className="reason">
+      <img src={image} alt={alt} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
   )
 }
 
-export default Reason
+export default Reason;

@@ -10,10 +10,10 @@ import WhyChooseUs from './components/sections/WhyChooseUs';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Overmenu />
-    <HeaderDesktop />
-    <HeaderMobile />
-    <Hero />
-    <WhyChooseUs/>
+      <Overmenu />
+      <HeaderDesktop />
+      <HeaderMobile />
+      <Hero />
+      <WhyChooseUs/>
   </StrictMode>,
 )

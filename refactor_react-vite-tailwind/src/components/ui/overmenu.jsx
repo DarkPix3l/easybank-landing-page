@@ -3,7 +3,6 @@ import { useState } from 'react'
 function Overmenu() {
 
   return (
-    <>
     <div className="overmenu">
       <nav className="mobile-menu">
         <a href="#hero" aria-label="Go to home section">Home</a>
@@ -14,8 +13,7 @@ function Overmenu() {
       </nav>
 
     </div>
-    </>
   )
 }
 
-export default Overmenu
+export default Overmenu;
