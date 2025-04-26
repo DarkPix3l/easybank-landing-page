@@ -7,14 +7,16 @@ import HeaderMobile from './components/ui/HeaderDesktop';
 import Hero from './components/sections/Hero';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import Blog from './components/sections/Blog';
+import Footer from './components/sections/Footer';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <Overmenu />
+      {/* <Overmenu /> */}
       <HeaderDesktop />
       <HeaderMobile />
       <Hero />
       <WhyChooseUs/>
       <Blog />
+      <Footer/>
   </StrictMode>,
 )
