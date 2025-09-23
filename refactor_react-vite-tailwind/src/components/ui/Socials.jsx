@@ -1,10 +1,10 @@
 function Socials() {  //different approach using array+map method. crazy....
   const socialMediaLinks = [
-    { name: 'facebook', url: 'https://facebook.com', icon: './images/icon-facebook.svg' },
-    { name: 'youtube', url: 'https://youtube.com', icon: './images/icon-youtube.svg' },
-    { name: 'twitter', url: 'https://twitter.com', icon: './images/icon-twitter.svg' },
-    { name: 'pinterest', url: 'https://pinterest.com', icon: './images/icon-pinterest.svg' },
-    { name: 'instagram', url: 'https://instagram.com', icon: './images/icon-instagram.svg' }
+    { name: 'facebook', url: 'https://facebook.com', icon: './icons/socials/icon-facebook.svg' },
+    { name: 'youtube', url: 'https://youtube.com', icon: './icons/socials/icon-youtube.svg' },
+    { name: 'twitter', url: 'https://twitter.com', icon: './icons/socials/icon-twitter.svg' },
+    { name: 'pinterest', url: 'https://pinterest.com', icon: './icons/socials/icon-pinterest.svg' },
+    { name: 'instagram', url: 'https://instagram.com', icon: './icons/socials/icon-instagram.svg' }
   ];
 
   return (
