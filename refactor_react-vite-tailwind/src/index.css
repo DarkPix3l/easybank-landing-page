@@ -1,5 +1,4 @@
 /* @import "tailwindcss";
-@tailwind base;
 @tailwind components;
 @tailwind utilities; */
 
@@ -7,7 +6,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
   
 }
 
@@ -35,7 +33,6 @@
 html {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
-  /* - Weights: 300, 400, 700 */
   scroll-behavior: smooth;
 }
 
@@ -109,6 +106,8 @@ button:hover {
   );
 }
 
+
+
 .desktop-menu a {
   color: var(--Grayish-Blue);
   padding: 32px;
@@ -175,7 +174,6 @@ header .wrapper {
   right: 0;
   transform: translate(122px, 50px);
   width: clamp(300px, 56vw, 890px);
-  /* just a test for having the image a bit responsive also with desktop sizes */
   transform-origin: left center;
   z-index: 2;
 }
@@ -307,19 +305,10 @@ footer .wrapper .invite {
   margin-bottom: 20px;
 }
 
-/* Behaviour classes (no js) */
-.mobile {
-  display: none;
-}
-
-.desktop {
-  display: inherit;
-}
-
 .overmenu {
   height: 100vh;
   width: 100%;
-  position: fixed; /* changed to fixed because will make the menu appear at a fixed position relative to the viewport */
+  position: fixed;
   z-index: 3;
   background: linear-gradient(
     180deg,
@@ -371,20 +360,6 @@ footer .wrapper .invite {
   letter-spacing: 0.5px;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-
 
 /* --------------Media Queries---------------- */
 
@@ -398,15 +373,12 @@ footer .wrapper .invite {
   section {
     padding: 8%;
   }
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: inherit;
-  }
   .hamburger {
     width: 40px;
     cursor: pointer;
+  }
+  .desktop-menu a{
+    padding: 18px;
   }
   .call2action {
     max-width: 381px;
