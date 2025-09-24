@@ -1,9 +1,9 @@
-import Article from "../ui/Article";
+import Article from "../ui/Blog/Article";
 
 function Blog() {
   return (
 <section id="blog" aria-label="blog section" className="bg-gray-200 py-[6%] scroll-m-[100px]">
-  <div className="max-w-[85%] mx-auto">
+  <div className="wrapper">
     <h2 className="text-dark-blue font-normal text-center xl:text-left">Latest Articles</h2>
     <div className="article-container grid gap-[26px] grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mt-[30px] md:grid-cols-2">
         <Article
