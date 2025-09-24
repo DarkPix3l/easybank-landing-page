@@ -3,7 +3,7 @@ import ButtonR from "../Button/ButtonR";
 function HeaderDesktop() {
   return (
     <header className='w-full h-[100px] fixed bg-white z-[3]'>
-      <div className='headerWrapper flex flex-row justify-between items-center h-full w-[85%] m-auto'>
+      <div className='headerWrapper flex flex-row justify-between items-center h-full w-[85%] xl:max-w-[1920px] xl:mx-auto'>
         <img
           src='./images/logo.svg'
           alt='Easybank logo'
