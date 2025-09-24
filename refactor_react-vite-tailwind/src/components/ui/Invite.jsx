@@ -1,7 +1,9 @@
+import ButtonR from "./Button/ButtonR";
+
 function Invite() {
   return (
     <div className="invite">
-      <button>Request Invite</button>
+      <ButtonR name={"Request Invite"} variant="gradient" type={"button"} className="mb-4"></ButtonR>
       <p>© Easybank. All Rights Reserved</p>
       <p className="attribution">
         Challenge by{" "}
