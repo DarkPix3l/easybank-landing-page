@@ -11,7 +11,6 @@ This project is a solution for a responsive landing page, designed to look as cl
 
 Live Previews:
 
-- [Vanilla Version](https://fm-easybank-landing-page.netlify.app/)
 - [React/Tailwind - Refactor](https://fm-easybank-landing-page-react.netlify.app/)
 
 
